@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>menu02</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<div class="drawer_menu">
+			<!-- コピーライト消さないように！
+				Zarigani Design Office Drawer Menu
+				Copyright 2018 Zarigani Design Office
+		                Customized by minimalgreen
+
+				Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+				The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+				THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+				コピーライトここまで -->
+			<div class="drawer_bg"></div>
+			<button type="button" class="drawer_button">
+				<span class="drawer_bar drawer_bar1"></span>
+				<span class="drawer_bar drawer_bar2"></span>
+				<span class="drawer_bar drawer_bar3"></span>
+				<span class="drawer_menu_text drawer_text">MENU</span>
+				<span class="drawer_close drawer_text">CLOSE</span>
+			</button>
+			<nav class="drawer_nav_wrapper">
+				<ul class="drawer_nav">
+					<li>
+						<a href="#">メニュー1 </a>
+					</li>
+					<li>
+						<a href="#">メニュー2 </a>
+						<span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
+						<ul class="second-level">
+							<li>
+								<a href="">サブメニュー1</a>
+							</li>
+							<li>
+								<a href="">サブメニュー2</a>
+							</li>
+							<li>
+								<a href="">サブメニュー3</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">メニュー3 </a>
+						<span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
+						<ul class="second-level">
+							<li>
+								<a href="">サブメニュー1</a>
+							</li>
+							<li>
+								<a href="">サブメニュー2</a>
+							</li>
+							<li>
+								<a href="">サブメニュー3</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">メニュー4 </a>
+					</li>
+					<li>
+						<a href="#">メニュー5 </a>
+					</li>
+					<li>
+						<a href="#">メニュー6 </a>
+					</li>
+				</ul>
+				<!-- PC非表示フリースペース -->
+				<div class="pc-hidden">
+					<div class="drawer-title">Profile</div>
+					<p>
+						<img src="プロフィール画像URL" alt="プロフィールアイコン " class="profile-icon">
+					</p>
+					<p>id:プロフィール名<br>プロフィール説明文を入れて下さい。
+					</p>
+					<div class="center">
+						<div class="follow-buttons">
+							<div class="center">＼ Follow me ／</div>
+							<a class="facebook" href="facebookページURL" target="">
+								<i class="blogicon-facebook lg"></i>
+								<span class="inner-text">Facebook</span>
+							</a>
+							<a class="instagram" href="https://www.instagram.com/ユーザー名" target="">
+								<i class="blogicon-instagram lg"></i>
+								<span class="inner-text">Instagram</span>
+							</a>
+							<a class="twitter" href="https://twitter.com/ユーザー名" target="">
+								<i class="blogicon-twitter lg"></i>
+								<span class="inner-text">Twitter</span>
+							</a>
+							<a class="hatena" href="http://blog.hatena.ne.jp/ユーザー名/ブログドメイン/subscribe" target="">
+								<i class="blogicon-hatenablog lg"></i>
+								<span class="inner-text">Hatena</span>
+							</a>
+							<a class="feedly" href="https://feedly.com/i/subscription/feed/http:ブログドメイン/feed" target="">
+								<i class="blogicon-rss lg"></i>
+								<span class="inner-text">Feedly</span>
+							</a>
+						</div>
+					</div>
+				</div><!-- PC非表示フリースペースここまで -->
+			</nav>
+		</div>
+		<!-- jQuery読み込み -->
+     <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+		<script>
+		$(function () {
+
+			$('.drawer_button').click(function () {
+				$(this).toggleClass('active');
+				$('.drawer_bg').fadeToggle();
+				$('nav').toggleClass('open');
+			})
+			$('.drawer_bg').click(function () {
+				$(this).fadeOut();
+				$('.drawer_button').removeClass('active');
+				$('nav').removeClass('open');
+			});
+			$(".touch-btn").on("click", function () {
+				$(this).next().slideToggle();
+			});
+		})
+		</script>
+	
+</body>
+</html>
